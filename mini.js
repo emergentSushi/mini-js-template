@@ -1,6 +1,6 @@
 function render(data, id) {
 	var template = document.getElementById(id).innerHTML;
-	var tokens = template.match(/\{\{([a-zA-Z\d:]+)\}\}/g)
+	var tokens = template.match(/\{\{([a-zA-Z\d:-]+)\}\}/g)
     var match;
 	for (var x = 0; x < tokens.length; x++) {
 		var prop = tokens[x].slice(2, tokens[x].length - 2)
