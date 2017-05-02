@@ -4,17 +4,19 @@ function render(data, id) {
     
 	for (var x = 0; x < tokens.length; x++) {
 		var prop = tokens[x].slice(2, tokens[x].length - 2)
-		  , val = ''
-	      , subtemplate = prop.split(':');
+		  , val = '';
 			
-		if (subtemplate.length == 3) {
-			var d = data[subtemplate[1]];
-			for (var i = 0; i < d.length; i++) {
-				val += render(d[i], subtemplate[2]);
-			}
+		if (data.hasOwnProperty(prop)) {
+			val = data[prop];
 		}
 		else {
-			val = data[prop];
+			var subtemplate = prop.split(':');
+			if (subtemplate.length == 3) {
+				var d = data[subtemplate[1]];
+				for (var i = 0; i < d.length; i++) {
+					val += render(d[i], subtemplate[2]);
+				}
+			}
 		}
 		
 		template = template.split(tokens[x]).join(val);
