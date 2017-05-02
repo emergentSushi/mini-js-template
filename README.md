@@ -29,3 +29,19 @@ var model = {   firstName: 'Bob', lastName: 'Smith',
 document.getElementById('parent')
 	.insertAdjacentHTML('beforeend', render(model, 'test'));
 ```
+
+## Output
+```HTML
+<div id="parent">
+	<div>
+		<h3>Bob Smith</h3>
+		<ul>
+			
+	<li>Drawing</li>
+
+	<li>Painting</li>
+
+		</ul>
+	</div>
+</div>
+```
