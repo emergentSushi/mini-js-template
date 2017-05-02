@@ -8,7 +8,6 @@ function render(data, id) {
 	      , subtemplate = prop.split(':');
 			
 		if (subtemplate.length == 3) {
-			prop = subtemplate[1];
 			var d = data[subtemplate[1]];
 			for (var i = 0; i < d.length; i++) {
 				val += render(d[i], subtemplate[2]);

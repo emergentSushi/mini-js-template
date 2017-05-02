@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script type="text/javascript" src="mini.js"></script>
+	</head>
+	<body>
+		<div id="start">
+			
+		</div>
+
+		<script type="text/html" id="test">
+			<h3>{{test2}}</h3>
+			<span>{{test1}}</span>
+			<span>{{each:parts:child}}</span>
+		</script>
+		<script type="text/html" id="child">
+			<span>{{el1}} - {{el2}}</span>
+		</script>
+
+		<script type="text/html" id="person-template">
+			<div>
+				<h3>{{firstName}} {{lastName}}</h3>
+				<ul>
+					{{each:hobbies:hobby-template}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/html" id="hobby-template">
+			<li>{{name}}</li>
+		</script>
+
+		<script type="text/javascript">
+
+			var model = {   firstName: 'Bob', lastName: 'Smith', 
+							hobbies:
+							[
+								{ name: 'Drawing' }, 
+								{ name: 'Painting' } 
+							]
+					    };
+			document.getElementById('start')
+				.insertAdjacentHTML('beforeend', render(model, 'person-template'));
+		</script>
+	</body>
+</html>
