@@ -36,11 +36,8 @@ document.getElementById('parent')
 	<div>
 		<h3>Bob Smith</h3>
 		<ul>
-			
-	<li>Drawing</li>
-
-	<li>Painting</li>
-
+			<li>Drawing</li>
+			<li>Painting</li>
 		</ul>
 	</div>
 </div>
