@@ -1,5 +1,5 @@
 # mini-js-template
-Compact, no dependency JavaScript template library.
+Compact, no dependency JavaScript template library. I've written variations on this theme several times for demos and prototypes, but each time they were written on company time so I didn't have the right to open source them. This is a new, from scratch implementation that I hold the copyright to :)
 
 ## Example Template
 ```HTML
